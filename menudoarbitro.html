@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links para outras páginas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+      height: 100%;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('../slaad/imagem/logo3.jpg');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+      background: transparent;
+    }
+
+    .botao-topo {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(to right, #004aad, #002b80);
+      text-decoration: none;
+      border: 2px solid #ffffff55;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .botao-topo:hover {
+      background: linear-gradient(to right, #003b8b, #001f5c);
+      transform: scale(1.05);
+    }
+
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      padding: 30px 15px;
+    }
+
+    .botao {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 25px;
+      padding: 24px 48px;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(to right, #004aad, #002b80);
+      text-decoration: none;
+      border: 2px solid #ffffff55;
+      border-radius: 50px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    .botao i {
+      font-size: 22px;
+    }
+
+    .botao:hover {
+      background: linear-gradient(to right, #003b8b, #001f5c);
+      transform: scale(1.08);
+    }
+
+    .botao:active {
+      transform: scale(0.95);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 600px) {
+      .botao, .botao-topo {
+        font-size: 16px;
+        padding: 14px 22px;
+        width: auto;
+      }
+
+      .botao {
+        margin: 15px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="botao-topo" href="https://arbitragemslaad.github.io/slaad/">
+      <i class="fas fa-arrow-left"></i> Voltar ao Início
+    </a>
+  </header>
+
+  <div class="main-content">
+    <a class="botao" href="https://docs.google.com/forms/d/e/1FAIpQLSdq5kfUkuIsJHtd2bFDDnZzwv00v3JVp303ZK3WzLul-S0CnQ/viewform?usp=sf_link" target="_blank">
+      <i class="fas fa-calendar-check"></i> Disponibilidade da Semana
+    </a>
+    <a class="botao" href="" target="_blank">
+      <i class="fas fa-clipboard-list"></i> Escala da Semana
+    </a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLAAD Arbitragem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top h1 {
+            margin: 0 auto;
+            font-size: 2em;
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            background-image: url();
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 1;
+        }
+
+        .whatsapp-link {
+            color: green;
+            font-size: 24px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .content h2, .content p {
+            font-size: 1.2em;
+            color: black;
+            font-weight: bold;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .whatsapp-link i {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1em;
+                display: block;
+                margin: 10px 0;
+            }
+
+            .container {
+                padding: 15px;
+                max-width: 100%;
+                margin: 10px;
+            }
+
+            .content h2 {
+                font-size: 1.5em;
+            }
+
+            .content p {
+                font-size: 1em;
+            }
+
+            .header-top {
+                flex-direction: column;
+            }
+
+            .header-top h1 {
+                margin: 10px 0;
+            }
+
+            .logo {
+                width: 60px;
+                margin: 5px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .whatsapp-link {
+                font-size: 20px;
+            }
+
+            .content h2 {
+                font-size: 1.2em;
+            }
+
+            .content p {
+                font-size: 0.9em;
+            }
+
+            footer {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <img src="/slaad/imagem/logo2.jpg" alt="Logo Esquerda" class="logo">
+            <h1>Superliga de árbitros Associdos e Desportos</h1>
+            
+            <img src="/slaad/imagem/logo3.jpg" alt="Logo Direita" class="logo">
+        </div>
+        <nav>
+            <a href="../slaad/Arbitros.html">Árbitros</a>
+            <a href="../slaad/Campeonatos.html">Campeonatos</a>
+            <a href="../slaad/Galeriadefotos.html">Galeria de Fotos</a>
+            <a href="../slaad/livroderegrais.html">Livro de Regrais</a>
+            <a href="../slaad/menudoarbitro.html">Menu Árbitro</a>
+            <a href="https://wa.me/5521991037880" target="_blank" class="whatsapp-link">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>Sobre a SLAAD Arbitragem</h2>
+            <p>Slaad Arbitragem (Superliga de Árbitros Associados e Desportos) criada em 26/06/2022, pelos árbitros: Fabio Nunes, Guilherme Hiath, João Pedro Guimarães, Luiz Henrique Maximiliano e Yago Carvalho, com sede em Teresópolis RJ. Hoje conta com um quadro de 31 Árbitros, sendo estes 17 de Teresópolis, 8 de São José do Vale do Rio Preto, 4 de Petrópolis, 1 de Magé, 1 de Além Paraíba. Atuando em modalidades como: Futebol, Futsal, Fut7, X2, X1, Handebol, Basquetebol e Voleibol.</p>
+            <p>Tendo árbitros federados pela Ferj (Federação de Futebol do Estado do Rio de Janeiro), FFSERJ (Federação de Futsal do Estado do Rio de Janeiro) e CBF7 (Confederação Brasileira de Fut7).</p>
+            <p>Tendo como objetivo entregar uma arbitragem de qualidade para suas competições e jogos amistosos, contamos com atualizações de regras com Renata Leite, ex-árbitra FIFA e coordenadora da CONMEBOL Futsal, Rogério Lucas, árbitro FIFA de Fut7, e outros árbitros da FERJ e FFSERJ.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>SLAAD Arbitragem &copy; 2025</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbitros - SLAAD Arbitragem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 10px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: #ffcc00;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Estilos do modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 80%;
+            max-height: 80%;
+            margin: auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header a {
+                font-size: 1em;
+            }
+
+            .image-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+
+            .image-gallery img {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header a {
+                font-size: 0.9em;
+            }
+
+            .image-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Galeria de Árbitros - SLAAD</h1>
+        <a href="https://arbitragemslaad.github.io/slaad/">Voltar ao Início</a>
+    </header>
+
+    <!-- Galeria de Imagens -->
+    <div class="image-gallery">
+        <img src="../slaad/imagem/foto01.jpeg" alt="Jogo 37" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto02.jpeg" alt="Jogo 03" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto03.jpeg" alt="Jogo 04" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto04.jpeg" alt="Jogo 06" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto04.jpeg" alt="Jogo 07" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto05.jpeg" alt="Jogo 08" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto06.jpeg" alt="Jogo 09" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto07.jpeg" alt="Jogo 10" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto08.jpeg" alt="Jogo 11" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto09.jpeg" alt="Jogo 12" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto10.jpeg" alt="Jogo 14" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto11.jpeg" alt="Jogo 15" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto12.jpeg" alt="Jogo 16" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto13.jpeg" alt="Jogo 17" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto14.jpeg" alt="Jogo 18" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto15.jpeg" alt="Jogo 19" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto16.jpeg" alt="Jogo 20" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto17.jpeg" alt="Jogo 21" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto18.jpeg" alt="Jogo 22" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto19.jpeg" alt="Jogo 23" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto20.jpeg" alt="Jogo 24" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto21.jpeg" alt="Jogo 25" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto22.jpeg" alt="Jogo 26" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto23.jpeg" alt="Jogo 27" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto24.jpeg" alt="Jogo 28" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto25.jpeg" alt="Jogo 29" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto26.jpeg" alt="Jogo 30" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto27.jpeg" alt="Jogo 31" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto28.jpeg" alt="Jogo 32" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto29.jpeg" alt="Jogo 33" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto30.jpeg" alt="Jogo 34" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto31.jpeg" alt="Jogo 35" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto32.jpeg" alt="Jogo 36" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto33.jpeg" alt="Jogo 38" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto34.jpeg" alt="Jogo 39" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto35.jpeg" alt="Jogo 34" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto36.jpeg" alt="Jogo 35" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto37.jpeg" alt="Jogo 36" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto38.jpeg" alt="Jogo 38" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto39.jpeg" alt="Jogo 39" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto41.jpeg" alt="Jogo 35" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto42.jpeg" alt="Jogo 36" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto43.jpeg" alt="Jogo 38" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto44.jpeg" alt="Jogo 39" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto45.jpeg" alt="Jogo 38" onclick="openModal(this.src)">
+        <img src="../slaad/imagem/foto46.jpeg" alt="Jogo 39" onclick="openModal(this.src)">
+    </div>
+    </div>
+
+    <!-- Modal para ampliar a imagem -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 SLAAD Arbitragem - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        // Função para abrir o modal
+        function openModal(src) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

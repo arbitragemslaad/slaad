@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Livro de Regras</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 0;
+      color: #333;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../slaad/imagem/logo3.jpg');
+      background-size: 400px auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.12;
+      z-index: -1;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: #fff;
+      padding: 12px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .inicio {
+      display: inline-block;
+      margin: 8px auto;
+      padding: 10px 20px;
+      background-color: #2563eb;
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s, background-color 0.3s;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+      font-size: 16px;
+      max-width: 90%;
+      text-align: center;
+    }
+
+    .inicio:hover {
+      background-color: #3b82f6;
+      transform: scale(1.05);
+    }
+
+    .inicio-container {
+      display: flex;
+      justify-content: center;
+      margin: 5px 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 6px;
+      padding: 8px;
+      margin: auto;
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .card {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #fff;
+      border-radius: 10px;
+      height: 180px;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .footer {
+      background-color: #1e3a8a;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      width: 100%;
+      margin-top: auto;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 18px;
+        padding: 8px;
+      }
+
+      .inicio {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+        padding: 6px;
+        gap: 5px;
+      }
+
+      .card {
+        height: 140px;
+        background-size: contain; /* ✅ Aqui está o ajuste importante */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #fff;
+      }
+
+      .footer {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Livro de Regras</header>
+  <div class="inicio-container">
+    <a class="inicio" href="https://arbitragemslaad.github.io/slaad/">Voltar ao Início</a>
+  </div>
+  <div class="container">
+    <a class="card" style="background-image: url('../slaad/imagem/regra01.jpeg');" href="https://conteudo.cbf.com.br/cdn/201910/20191028182833_565.pdf"></a>
+    <a class="card" style="background-image: url('../slaad/imagem/regra06.jpeg');" href="https://files.cercomp.ufg.br/weby/up/155/o/REGRAS_HANDEBOL.pdf"></a>
+    <a class="card" style="background-image: url('../slaad/imagem/regra02.jpeg');" href="https://cbfs.com.br/cbfsadm/arquivos/Site/228_.pdf"></a>
+    <a class="card" style="background-image: url('../slaad/imagem/regra04.jpeg');" href="https://files.cercomp.ufg.br/weby/up/155/o/REGRAS_DO_V%C3%90LEI.pdf"></a>
+    <a class="card" style="background-image: url('../slaad/imagem/regra03.jpeg');" href="https://cbf7.com.br/Documentos/Livro%20de%20Regras%20FUT7.pdf"></a>
+    <a class="card" style="background-image: url('../slaad/imagem/regra05.jpeg');" href="https://www.cbb.com.br/wp-content/uploads/Regras-Oficiais-Basketball-2024-ALTERACOES-ABRIL-2024-REVISAO-JANEIRO-2025_1.pdf"></a>
+  </div>
+  <footer class="footer">© 2025 - Livro de Regras</footer>
+</body>
+</html>
