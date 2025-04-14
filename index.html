@@ -7,8 +7,7 @@
     <title>SLAAD Arbitragem</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        html,
-        body {
+        html, body {
             background-color: #003366 !important;
             height: 100%;
             margin: 0;
@@ -29,7 +28,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('../slaad/imagem/logoinicio.jpeg');
+            background-image: url('../slaad/imagem/capa.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -37,6 +36,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: opacity 0.3s ease; /* Transição suave */
         }
 
         .close-btn {
@@ -216,13 +216,18 @@
     <script>
         // Verificar se a imagem já foi fechada
         if (!localStorage.getItem('imageClosed')) {
+            // Exibe a imagem ao carregar a página pela primeira vez
             document.getElementById('imageOverlay').style.display = 'flex';
+        } else {
+            // Se a imagem foi fechada, não exibe mais
+            document.getElementById('imageOverlay').style.display = 'none';
         }
 
-        // Função para fechar a imagem e guardar no localStorage
+        // Função para fechar a imagem e armazenar no localStorage
         function closeImage() {
+            // Esconde a imagem e marca que foi fechada
             document.getElementById('imageOverlay').style.display = 'none';
-            localStorage.setItem('imageClosed', 'true');
+            localStorage.setItem('imageClosed', 'true'); // Marcar que a imagem foi fechada
         }
     </script>
 </body>
