@@ -1,69 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="a7ZI7WMxxTJNUgSg3YTk3wDteL6sG_lDoV59GRgLqWc" />
     <title>SLAAD Arbitragem</title>
+    <link rel="icon" href="../slaad/imagem/icone.png" type="image/x-icon">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        html, body {
-            background-color: #003366 !important;
-            height: 100%;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-            z-index: 1;
-        }
-
-        /* Camada da imagem */
-        .image-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('../slaad/imagem/capa.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.3s ease; /* Transição suave */
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            font-size: 30px;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-            z-index: 10000;
-        }
-
-        .close-btn:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
         header {
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: #003366;
             color: white;
             padding: 1em;
             text-align: center;
-            position: relative;
-            z-index: 100;
         }
 
         .header-top {
@@ -89,20 +47,29 @@
             font-size: 1.2em;
         }
 
-        .content {
+        .container {
             padding: 20px;
-            color: white;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            background-image: url();
+            background-size: cover;
+            background-position: center;
+            color: #333;
         }
 
-        footer {
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 1em;
+        .container::after {
+            content: '';
             position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
             bottom: 0;
-            width: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 1;
         }
 
         .whatsapp-link {
@@ -112,22 +79,49 @@
             display: inline-block;
         }
 
-        .instagram-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 18px;
-            text-decoration: none;
-            color: #fff;
-            margin-top: 10px;
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
 
-        /* Responsividade para dispositivos móveis */
-        @media (max-width: 900px) {
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .content h2, .content p {
+            font-size: 1.2em;
+            color: black;
+            font-weight: bold;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .whatsapp-link i {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
             nav a {
                 font-size: 1em;
                 display: block;
                 margin: 10px 0;
+            }
+
+            .container {
+                padding: 15px;
+                max-width: 100%;
+                margin: 10px;
             }
 
             .content h2 {
@@ -175,61 +169,41 @@
         }
     </style>
 </head>
-
 <body>
-    <!-- Camada da imagem que aparece ao entrar no site -->
-    <div class="image-overlay" id="imageOverlay">
-        <button class="close-btn" onclick="closeImage()">X</button>
-    </div>
-
     <header>
         <div class="header-top">
-            <img src="../slaad/imagem/logo2.jpg" alt="Logo Esquerda" class="logo">
-            <h1>Superliga de Árbitros Associados e Desportos</h1>
-            <img src="../slaad/imagem/logo3.jpg" alt="Logo Direita" class="logo">
+            <img src="/slaad/imagem/logo2.jpg" alt="Logo Esquerda" class="logo">
+            <h1>Superliga de Árbitros Associdos e Desportos</h1>
+            
+            <img src="/slaad/imagem/logo3.jpg" alt="Logo Direita" class="logo">
         </div>
         <nav>
             <a href="../slaad/Arbitros.html">Árbitros</a>
-            <a href="../slaad/historia.html">História</a>
             <a href="../slaad/Campeonatos.html">Campeonatos</a>
             <a href="../slaad/Galeriadefotos.html">Galeria de Fotos</a>
-            <a href="../slaad/livroderegrais.html">Livro de Regras</a>
+            <a href="../slaad/livroderegrais.html">Livro de Regrais</a>
             <a href="../slaad/menudoarbitro.html">Menu Árbitro</a>
             <a href="https://wa.me/5521991037880" target="_blank" class="whatsapp-link">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
-            <a href="https://www.instagram.com/slaad_arbitragem?igsh=MWFpdDN4c2l2eHJsag==" target="_blank" class="instagram-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" height="30"> Instagram
-            </a>
+            <a href="https://www.instagram.com/slaad_arbitragem?igsh=MWFpdDN4c2l2eHJsag==" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" height="30"></i> Instagram
+</a>
+
         </nav>
     </header>
 
-    <div class="content">
-        <h2>Bem-vindo ao site da SLAAD Arbitragem</h2>
-        <p>Informações sobre árbitros, campeonatos e muito mais.</p>
+    <div class="container">
+        <div class="content">
+            <h2>Sobre a SLAAD Arbitragem</h2>
+            <p>Slaad Arbitragem (Superliga de Árbitros Associados e Desportos) criada em 26/06/2022, pelos árbitros: Fabio Nunes, Guilherme Hiath, João Pedro Guimarães, Luiz Henrique Maximiliano e Yago Carvalho, com sede em Teresópolis RJ. Hoje conta com um quadro de 31 Árbitros, sendo estes 17 de Teresópolis, 8 de São José do Vale do Rio Preto, 4 de Petrópolis, 1 de Magé, 1 de Além Paraíba. Atuando em modalidades como: Futebol, Futsal, Fut7, X2, X1, Handebol, Basquetebol e Voleibol.</p>
+            <p>Tendo árbitros federados pela Ferj (Federação de Futebol do Estado do Rio de Janeiro), FFSERJ (Federação de Futsal do Estado do Rio de Janeiro) e CBF7 (Confederação Brasileira de Fut7).</p>
+            <p>Tendo como objetivo entregar uma arbitragem de qualidade para suas competições e jogos amistosos, contamos com atualizações de regras com Renata Leite, ex-árbitra FIFA e coordenadora da CONMEBOL Futsal, Rogério Lucas, árbitro FIFA de Fut7, e outros árbitros da FERJ e FFSERJ.</p>
+        </div>
     </div>
 
     <footer>
         <p>SLAAD Arbitragem &copy; 2025</p>
     </footer>
-
-    <script>
-        // Verificar se a imagem já foi fechada no localStorage
-        if (!localStorage.getItem('imageClosed')) {
-            // Exibe a imagem ao carregar a página pela primeira vez
-            document.getElementById('imageOverlay').style.display = 'flex';
-        } else {
-            // Se a imagem foi fechada, não exibe mais
-            document.getElementById('imageOverlay').style.display = 'none';
-        }
-
-        // Função para fechar a imagem e armazenar no localStorage
-        function closeImage() {
-            // Esconde a imagem e marca que foi fechada
-            document.getElementById('imageOverlay').style.display = 'none';
-            localStorage.setItem('imageClosed', 'true'); // Marcar que a imagem foi fechada
-        }
-    </script>
 </body>
-
 </html>
