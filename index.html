@@ -47,15 +47,25 @@
 
         /* Ajuste para imagem de fundo */
         .image-container {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 150%;
-            height: 75vh;
-            background-image: url('../slaad/imagem/capa.jpeg');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
+            width: 100%;
+            /* Tamanho maior da imagem */
+            height: 50vh;
+            overflow: hidden;
+            /* Impede que a imagem ultrapasse o container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            /* Fundo para evitar áreas em branco */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-width: none;
+            /* Retira limite de largura */
+            object-fit: cover;
+            /* Faz com que a imagem cubra todo o espaço */
         }
 
         .content {
@@ -148,7 +158,7 @@
 
             .image-container {
                 height: 60vh;
-                /* Aumentado para celulares */
+                width: 150%;
             }
         }
     </style>
@@ -178,7 +188,9 @@
     </header>
 
     <!-- Contêiner de imagem ajustado -->
-    <div class="image-container"></div>
+    <div class="image-container">
+        <img src="../slaad/imagem/capa.jpeg" alt="Imagem de capa">
+    </div>
 
     <footer>
         <p>SLAAD Arbitragem &copy; 2025</p>
