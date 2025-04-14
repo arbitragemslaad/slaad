@@ -50,12 +50,10 @@
             position: relative;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 50vh;
-            /* Tamanho reduzido da imagem */
-            background-image: url('../slaad/imagem/logoinicio.jpeg');
+            width: 150%;
+            height: 75vh;
+            background-image: url('../slaad/imagem/capa.jpeg');
             background-size: contain;
-            /* Ajuste a imagem para caber sem cortar */
             background-position: center;
             background-repeat: no-repeat;
         }
@@ -72,9 +70,8 @@
             color: white;
             text-align: center;
             padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            font-size: 1em;
+            margin-top: 20px;
         }
 
         .whatsapp-link {
@@ -95,7 +92,7 @@
         }
 
         /* Responsividade para dispositivos móveis */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             nav a {
                 font-size: 1em;
                 display: block;
@@ -123,10 +120,8 @@
                 margin: 5px 0;
             }
 
-            /* Ajuste para imagem em dispositivos móveis */
             .image-container {
                 height: 40vh;
-                /* Tamanho reduzido para dispositivos móveis */
             }
         }
 
@@ -151,10 +146,9 @@
                 font-size: 0.9em;
             }
 
-            /* Ajuste de imagem para celulares pequenos */
             .image-container {
-                height: 30vh;
-                /* Ainda menor para celulares */
+                height: 60vh;
+                /* Aumentado para celulares */
             }
         }
     </style>
@@ -183,7 +177,7 @@
         </nav>
     </header>
 
-    <!-- Contêiner de imagem ajustado para não ser distorcida -->
+    <!-- Contêiner de imagem ajustado -->
     <div class="image-container"></div>
 
     <footer>
