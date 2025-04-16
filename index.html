@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
+        /* (Seu CSS continua igual, não fiz alterações aqui) */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -174,7 +175,6 @@
         <div class="header-top">
             <img src="/slaad/imagem/logo2.jpg" alt="Logo Esquerda" class="logo">
             <h1>Superliga de Árbitros Associdos e Desportos</h1>
-            
             <img src="/slaad/imagem/logo3.jpg" alt="Logo Direita" class="logo">
         </div>
         <nav>
@@ -182,14 +182,13 @@
             <a href="../slaad/Campeonatos.html">Campeonatos</a>
             <a href="../slaad/Galeriadefotos.html">Galeria de Fotos</a>
             <a href="../slaad/livroderegrais.html">Livro de Regrais</a>
-            <a href="../slaad/menudoarbitro.html">Menu Árbitro</a>
+            <a href="#" onclick="verificarSenha()">Menu Árbitro</a>
             <a href="https://wa.me/5521991037880" target="_blank" class="whatsapp-link">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
             <a href="https://www.instagram.com/slaad_arbitragem?igsh=MWFpdDN4c2l2eHJsag==" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" height="30"></i> Instagram
-</a>
-
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" height="30"> Instagram
+            </a>
         </nav>
     </header>
 
@@ -205,5 +204,18 @@
     <footer>
         <p>SLAAD Arbitragem &copy; 2025</p>
     </footer>
+
+    <!-- Script da senha -->
+    <script>
+        function verificarSenha() {
+            const senha = prompt("Digite a senha para acessar o Menu do Árbitro:");
+
+            if (senha === "slaad2025") {
+                window.location.href = "../slaad/menudoarbitro.html";
+            } else {
+                alert("Senha incorreta. Acesso negado.");
+            }
+        }
+    </script>
 </body>
 </html>
