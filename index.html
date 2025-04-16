@@ -41,28 +41,15 @@
             height: auto;
         }
 
+        nav {
+            margin-top: 10px;
+        }
+
         nav a {
             margin: 0 15px;
             color: white;
             text-decoration: none;
             font-size: 1.2em;
-        }
-
-        /* Menu hambúrguer */
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            width: 30px;
-            height: 21px;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .hamburger .bar {
-            width: 100%;
-            height: 4px;
-            background-color: white;
         }
 
         .container {
@@ -86,7 +73,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.5);
             z-index: 1;
         }
 
@@ -130,25 +117,37 @@
         }
 
         @media (max-width: 768px) {
-            nav {
-                display: none; /* Esconde o menu na versão móvel */
-                flex-direction: column;
-                width: 100%;
-                background-color: #003366;
-                text-align: center;
-            }
-
             nav a {
+                font-size: 1em;
+                display: block;
                 margin: 10px 0;
-                font-size: 1.2em;
             }
 
-            .hamburger {
-                display: flex; /* Exibe o ícone do menu hambúrguer */
+            .container {
+                padding: 15px;
+                max-width: 100%;
+                margin: 10px;
             }
 
-            nav.show {
-                display: flex; /* Exibe o menu ao clicar no ícone */
+            .content h2 {
+                font-size: 1.5em;
+            }
+
+            .content p {
+                font-size: 1em;
+            }
+
+            .header-top {
+                flex-direction: column;
+            }
+
+            .header-top h1 {
+                margin: 10px 0;
+            }
+
+            .logo {
+                width: 60px;
+                margin: 5px 0;
             }
         }
 
@@ -178,26 +177,21 @@
 <body>
     <header>
         <div class="header-top">
-            <img src="/slaad/imagem/logo2.jpg" alt="Logo da SLAAD - lado esquerdo" class="logo">
+            <img src="/slaad/imagem/logo2.jpg" alt="Logo Esquerda" class="logo">
             <h1>Superliga de Árbitros Associdos e Desportos</h1>
-            <img src="/slaad/imagem/logo3.jpg" alt="Logo da SLAAD - lado direito" class="logo">
+            <img src="/slaad/imagem/logo3.jpg" alt="Logo Direita" class="logo">
         </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <nav id="menu">
+        <nav>
             <a href="../slaad/Arbitros.html">Árbitros</a>
             <a href="../slaad/Campeonatos.html">Campeonatos</a>
             <a href="../slaad/Galeriadefotos.html">Galeria de Fotos</a>
-            <a href="../slaad/livroderegrais.html">Livro de Regras</a>
+            <a href="../slaad/livroderegrais.html">Livro de Regrais</a>
             <a href="#" onclick="verificarSenha()">Menu Árbitro</a>
             <a href="https://wa.me/5521991037880" target="_blank" class="whatsapp-link">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
             <a href="https://www.instagram.com/slaad_arbitragem?igsh=MWFpdDN4c2l2eHJsag==" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram da SLAAD" width="30" height="30"> Instagram
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" height="30"> Instagram
             </a>
         </nav>
     </header>
@@ -225,12 +219,6 @@
             } else {
                 alert("Senha incorreta. Acesso negado.");
             }
-        }
-
-        // Funcionalidade para abrir e fechar o menu hambúrguer
-        function toggleMenu() {
-            const menu = document.getElementById("menu");
-            menu.classList.toggle("show");
         }
     </script>
 </body>
