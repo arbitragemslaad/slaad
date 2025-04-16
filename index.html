@@ -9,13 +9,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        /* (Seu CSS continua igual, não fiz alterações aqui) */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            padding-bottom: 60px; /* Evita que o footer cubra o conteúdo */
         }
 
         header {
@@ -48,6 +48,10 @@
             font-size: 1.2em;
         }
 
+        nav a.active {
+            border-bottom: 2px solid yellow;
+        }
+
         .container {
             padding: 20px;
             max-width: 900px;
@@ -69,7 +73,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.8); /* Melhor contraste */
             z-index: 1;
         }
 
@@ -173,21 +177,21 @@
 <body>
     <header>
         <div class="header-top">
-            <img src="/slaad/imagem/logo2.jpg" alt="Logo Esquerda" class="logo">
+            <img src="/slaad/imagem/logo2.jpg" alt="Logo da SLAAD - lado esquerdo" class="logo">
             <h1>Superliga de Árbitros Associdos e Desportos</h1>
-            <img src="/slaad/imagem/logo3.jpg" alt="Logo Direita" class="logo">
+            <img src="/slaad/imagem/logo3.jpg" alt="Logo da SLAAD - lado direito" class="logo">
         </div>
         <nav>
-            <a href="../slaad/Arbitros.html">Árbitros</a>
+            <a href="../slaad/Arbitros.html" class="active">Árbitros</a>
             <a href="../slaad/Campeonatos.html">Campeonatos</a>
             <a href="../slaad/Galeriadefotos.html">Galeria de Fotos</a>
-            <a href="../slaad/livroderegrais.html">Livro de Regrais</a>
+            <a href="../slaad/livroderegrais.html">Livro de Regras</a>
             <a href="#" onclick="verificarSenha()">Menu Árbitro</a>
             <a href="https://wa.me/5521991037880" target="_blank" class="whatsapp-link">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
             <a href="https://www.instagram.com/slaad_arbitragem?igsh=MWFpdDN4c2l2eHJsag==" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" height="30"> Instagram
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram da SLAAD" width="30" height="30"> Instagram
             </a>
         </nav>
     </header>
